@@ -1,14 +1,64 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Theme Demo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+        
+          <ion-grid>
+            <ion-row>
+              <ion-col>Primary color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.primary" [cpPosition]="'bottom'"
+                  cpPositionRelativeToArrow="true" [style.background]="themes.color.primary" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Secondary color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.secondary" [cpPosition]="'bottom'" cpPositionRelativeToArrow="true"
+                  [style.background]="themes.color.secondary" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Tertiary color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.tertiary" [cpPosition]="'bottom'" cpPositionRelativeToArrow="true"
+                  [style.background]="themes.color.tertiary" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Dark color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.dark" [cpPosition]="'bottom'" cpPositionRelativeToArrow="true"
+                  [style.background]="themes.color.dark" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Medium color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.medium" [cpPosition]="'bottom'" cpPositionRelativeToArrow="true"
+                  [style.background]="themes.color.medium" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Light color</ion-col>
+              <ion-col>
+                <input [(colorPicker)]="themes.color.light" [cpPosition]="'bottom'" cpPositionRelativeToArrow="true"
+                  [style.background]="themes.color.light" />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+            <ion-button expand="block" (click)="setTheme()" fill="outline">Apply Theme</ion-button>
+          <hr>
+          <ion-button color="primary">Primary</ion-button>
+          <ion-button color="secondary">Secondary</ion-button>
+          <ion-button color="tertiary">Tertiary</ion-button>
+          <ion-button color="medium">Medium</ion-button>
+          <ion-button color="dark">Dark</ion-button>
   </div>
 </ion-content>

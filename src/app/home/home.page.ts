@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+   themes = {
+    color:{}
+  }
+  constructor(
+    private themeService:ThemeService
+  ) {
 
+  }
+
+  setTheme(){
+    this.themeService.setTheme(this.themes.color);
+  }
 }
