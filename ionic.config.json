@@ -1,5 +1,7 @@
 {
   "name": "theme-test-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

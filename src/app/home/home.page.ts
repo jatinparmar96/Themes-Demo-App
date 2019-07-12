@@ -9,7 +9,14 @@ import { ThemeService } from '../theme.service';
 export class HomePage {
 
    themes = {
-    color:{}
+    color:{
+      primary:null,
+      secondary:null,
+      tertiary:null,
+      dark:null,
+      medium: null,
+      light: null,
+    }
   }
   constructor(
     private themeService:ThemeService
